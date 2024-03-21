@@ -1,0 +1,267 @@
+  
+:root {
+	--cl: #2888ff;
+	--rgbcl: 40 , 136 , 255;
+	--cl2: #335aff;
+	--bgcl: #e7ebff;
+	--bgprdc: 190 , 220 , 255;
+	--prdcbtncl: #a0cdff;
+	--prdcbtncl2: #8cc3ff;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('Vazir.eot');
+  src: url('Vazir.eot?#iefix') format('Vazir-opentype'),
+       url('Vazir.woff') format('woff'),
+       url('Vazir.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+	transition: 0.4s;
+	font-family: Vazir;
+	scroll-behavior: smooth;
+}
+body {
+	font-family: Arial, sans-serif;
+	background: var(--bgcl) url(bg.svg);
+	direction: rtl;
+	font-size: 100%;
+}
+
+p {
+	line-height: 2;
+}
+
+hr {
+	padding: 2px;
+	background: var(--cl);
+	border: 0;
+	border-radius: 5rem;
+	width: 30%;
+}
+button,a {
+	user-select: none;
+}
+.container {
+	max-width: 100%;
+	height: 90vh;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+.container .txt h1 {
+	font-size: 2.5rem;
+}
+.container .img img {
+	width: 100%;
+}
+.container div {
+	margin: 50px;
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: var(--cl);
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: 0.8s;
+}
+
+.button:hover {
+	background-color: var(--cl2);
+	box-shadow: 0 -50px 0 0 var(--cl2) inset;
+}
+.navbar { 
+	display: flex;
+	align-items: center;
+	position: fixed;
+    width: 99%;
+	z-index: 9999;
+	background: rgba(var(--bgprdc), 0.5);
+	backdrop-filter: blur(5px);
+	border-radius: 5px;
+}
+.navbar img {
+	width: 100%;
+}
+.navbar .brand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.nav {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+
+.nav li {
+	margin-right: 20px;
+}
+
+.nav li a {
+	color: var(--cl);
+	text-decoration: none;
+}
+
+.nav li a:hover {
+	opacity: 0.6;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+h1,h2 {
+	text-align: center;
+}
+
+h1 span,
+h2 span {
+	color: var(--cl);
+}
+
+section {
+	text-align: center;
+}
+
+section h1 {
+	font-size: 2.5rem;
+}
+
+.weprdc center {
+	display: flex;
+	padding: 100px;
+}
+
+.usabout center {
+	display: flex;
+	padding: 100px;
+	align-items: center;
+	justify-content: center;
+}
+.usabout center p {
+	color: var(--cl);
+	width: 50%;
+}
+
+.uscntct center {
+	padding: 60px;
+}
+
+.uscntct center a {
+	color: var(--cl);
+	font-size: 1.5rem;
+	background: rgba(var(--bgprdc), 0.8);
+	padding: 5px 12px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.uscntct center a:hover {
+	background: var(--cl2);
+	color: var(--bgcl);
+}
+
+section .product {
+	background: rgba(var(--bgprdc), 0.5);
+	backdrop-filter: blur(2px);
+	padding: 20px;
+	border-radius: 5px;
+	width: 40%;
+	height: fit-content;
+	margin: 15px;
+}
+section .product img {
+	border-radius: 5px;
+	width: 100%;
+}
+section .product h2 {
+	color: var(--cl2);
+}
+section .product p {
+	color: var(--cl);
+}
+section .product a {
+	background: var(--prdcbtncl);
+	width: 100%;
+	color: var(--cl2);
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+	display: block;
+}
+section .product a:hover {
+	background: var(--prdcbtncl2);
+}
+
+.btnnav-toggle {
+	padding: 10px;
+	color: var(--cl);
+	font-size: 2rem;
+	margin-left: 10px;
+}
+
+.nav-mobile {
+	background: rgba(var(--rgbcl), 0.8);
+	backdrop-filter: blur(5px);
+	width: 60%;
+	height: 100vh;
+	top: 0;
+	right: 0;
+	position: fixed;
+	display: none;
+	z-index: 100;
+}
+.nav-mobile a {
+	display: block;
+	text-decoration: none;
+	color: var(--bgcl);
+	padding: 20px;
+	font-size: 1.5rem;
+}
+.nav-mobile a:hover {
+	background: var(--cl);
+}
+.nav-mobile a span {
+	margin-right: 5px;
+}
+.nav-mobile .logo {
+	display: flex;
+	align-items: center;
+	padding: 17px;
+	margin-right: 7vh;
+	z-index: 1000;
+}
+@media only screen and (max-width: 800px) {
+  .nav {
+	display: none;
+  }
+  .nav-toggle {
+    display: block;
+	text-align: left;
+	width: 100%;
+  }
+  .container {
+	flex-direction: column-reverse;
+  }
+  .navbar { width: 98%; background: transparent; backdrop-filter: blur(0); }
+  section .product {
+	width: 85%;
+  }
+  .weprdc center {
+	flex-direction: column;
+  }
+  .usabout center { flex-direction: column-reverse; }
+  .usabout center p { width: 100%; }
+}
+
+
